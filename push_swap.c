@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:19:29 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 05:15:38 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 06:22:44 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,11 @@ int	main(int argc, char **argv)
 	//rotate_a(&stack_a);
 	//rotate_b(&stack_b);
 	//rotate_a_and_b(&stack_a, &stack_b);
-	debugger(stack_a, stack_b);
+	//reverse_rotate_a(&stack_a);
+	//reverse_rotate_b(&stack_b);
+	//reverse_rotate_a_and_b(&stack_a, &stack_b);
 
+	debugger(stack_a, stack_b);
 
 
 	ft_lstclear_mod(&stack_a);

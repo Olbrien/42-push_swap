@@ -6,13 +6,32 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:19:46 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 03:20:28 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 06:31:18 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_lstremove_last(t_stack **lst)
+void	ft_lstremove_first_mod(t_stack **lst)
+{
+	if (!lst || (*lst) == NULL)
+		return ;
+	ft_lstgoto_begin_mod(lst);
+	if (ft_lstsize_mod((*lst)) < 2)
+	{
+		ft_lstclear_mod(lst);
+		return ;
+	}
+	ft_lstgoto_begin_mod(lst);
+	if ((*lst)->next != NULL)
+	{
+		(*lst) = (*lst)->next;
+		free((*lst)->previous);
+		(*lst)->previous = NULL;
+	}
+}
+
+void	ft_lstremove_last_mod(t_stack **lst)
 {
 	t_stack	*current;
 

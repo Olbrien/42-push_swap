@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:18:22 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 05:13:55 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 06:18:10 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ void			rotate_a(t_stack **stack_a);
 void			rotate_b(t_stack **stack_b);
 void			rotate_a_and_b(t_stack **stack_a, t_stack **stack_b);
 
+void			reverse_rotate_a(t_stack **stack_a);
+void			reverse_rotate_b(t_stack **stack_b);
+void			reverse_rotate_a_and_b(t_stack **stack_a, t_stack **stack_b);
 
 /*
 **	Lst
@@ -74,6 +77,8 @@ t_stack			*ft_lstgoto_begin_mod(t_stack **lst);
 t_stack			*ft_lstgoto_end_mod(t_stack **lst);
 void			ft_lstadd_front_mod(t_stack **lst, t_stack *new);
 int				ft_lstsize_mod(t_stack *lst);
-void			ft_lstremove_last(t_stack **lst);
+void			ft_lstremove_last_mod(t_stack **lst);
+void			ft_lstremove_first_mod(t_stack **lst);
+
 
 #endif

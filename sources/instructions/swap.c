@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:38:44 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 04:59:01 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 05:43:39 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	swap_a(t_stack **stack_a)
 	(*stack_a) = (*stack_a)->previous;
 	temp_second_from_last = ft_lstnew_mod((*stack_a)->stack_nbr,
 						(*stack_a)->stack_order_nbr);
-	ft_lstremove_last(stack_a);
-	ft_lstremove_last(stack_a);
+	ft_lstremove_last_mod(stack_a);
+	ft_lstremove_last_mod(stack_a);
 
 	ft_lstadd_back_mod(stack_a, temp_last);
 	ft_lstadd_back_mod(stack_a, temp_second_from_last);
@@ -55,8 +55,8 @@ void	swap_b(t_stack **stack_b)
 	(*stack_b) = (*stack_b)->previous;
 	temp_second_from_last = ft_lstnew_mod((*stack_b)->stack_nbr,
 						(*stack_b)->stack_order_nbr);
-	ft_lstremove_last(stack_b);
-	ft_lstremove_last(stack_b);
+	ft_lstremove_last_mod(stack_b);
+	ft_lstremove_last_mod(stack_b);
 
 	ft_lstadd_back_mod(stack_b, temp_last);
 	ft_lstadd_back_mod(stack_b, temp_second_from_last);

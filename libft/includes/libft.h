@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 18:33:47 by marvin            #+#    #+#             */
-/*   Updated: 2021/05/24 22:42:20 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 06:52:42 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,14 @@ t_list2				*ft_lstgoto_begin2(t_list2 **lst);
 void				ft_lstadd_front2(t_list2 **lst, t_list2 *new);
 int					ft_lstsize2(t_list2 *lst);
 void				ft_lstremove_last2(t_list2 **lst);
+void				ft_lstremove_first2(t_list2 **lst);
+
+void				ft_swap2(t_list2 **stack_a);
+void				ft_push2(t_list2 **stack_a, t_list2 **stack_b);
+void				ft_rotate2(t_list2 **stack_a);
+void				ft_reverse_rotate2(t_list2 **stack_a);
+
+
 
 /*
 ** Math
@@ -120,6 +128,7 @@ char				*ft_strjoinchr(char *s1, char s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strcmp(char *s1, char *s2);
+char				*ft_strcpy(char *dest, char *src);
 
 /*
 ** To
