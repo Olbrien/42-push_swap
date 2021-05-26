@@ -3,21 +3,30 @@ i=0
 re='^[0-9]+$'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
+LIGHT_MANGENTA='\033[0;95m'
+LIGHT_BLUE='\033[0;94m'
 NC='\033[0m'
 
+clear
 
-if [ "$INDEX" -gt "0" ];
+if  [[ $INDEX = "0" ]] ; then
+   echo -e "${RED}Please insert a valid number after bash ./tester.sh\n\n" >&2; exit 1
+fi
+
+if [[ "$INDEX" -gt "0" ]];
 then
     INDEX="$(($INDEX-1))"
 fi
 
 if ! [[ $INDEX =~ $re ]] ; then
-   echo "Please insert a valid number after bash ./tester.sh" >&2; exit 1
+   echo -e "${RED}Please insert a valid number after bash ./tester.sh \n\n" >&2; exit 1
 fi
 
 rm output.txt
 
-while [ $i -le 10 ]
+echo -e "${LIGHT_BLUE}Sorting...\n\n${NC}"
+
+while [ $i -le 100 ]
 do
 	ARG=`ruby -e "puts (0..$INDEX).to_a.shuffle.join(' ')"`; echo $ARG >> output.txt ; ../a.out $ARG | ../checkers/checker_linux $ARG >> output.txt; ../a.out $ARG | wc -l >> output.txt
   ((i++))
@@ -31,10 +40,14 @@ INDEX="$(($INDEX+1))"
 
 if [[ $empty == *"1"* ]];
 then
-  echo -e "Sorting with $INDEX numbers${GREEN} PASSED!${NC}"
+  echo -e "Sorting ${LIGHT_MANGENTA}100 ${NC}random tests with $INDEX numbers${GREEN} PASSED!${NC}"
+  awk 'NR % 3 == 0' output.txt > results.txt
+  gcc output_info.c -lm
+  ./a.out
+  rm ./a.out
 else
-  echo -e "Sorting with $INDEX numbers${RED} FAILED! ${NC}"
+  echo -e "Sorting ${LIGHT_MANGENTA}100 ${NC}random tests with $INDEX numbers${RED} FAILED! ${NC}"
 fi
 
-
+echo -e "\n\n"
 
