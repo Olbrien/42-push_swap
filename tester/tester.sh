@@ -22,13 +22,13 @@ if ! [[ $INDEX =~ $re ]] ; then
    echo -e "${RED}Please insert a valid number after bash ./tester.sh \n\n" >&2; exit 1
 fi
 
-rm output.txt
+rm -f output.txt
 
 echo -e "${LIGHT_BLUE}Sorting...\n\n${NC}"
 
 while [ $i -le 100 ]
 do
-	ARG=`ruby -e "puts (0..$INDEX).to_a.shuffle.join(' ')"`; echo $ARG >> output.txt ; ../a.out $ARG | ../checkers/checker_linux $ARG >> output.txt; ../a.out $ARG | wc -l >> output.txt
+	ARG=`ruby -e "puts (0..$INDEX).to_a.shuffle.join(' ')"`; echo $ARG >> output.txt ; ../a.out $ARG | ./checkers/checker_linux $ARG >> output.txt; ../a.out $ARG | wc -l >> output.txt
   ((i++))
 done
 
@@ -45,6 +45,7 @@ then
   gcc output_info.c -lm
   ./a.out
   rm ./a.out
+  rm results.txt
 else
   echo -e "Sorting ${LIGHT_MANGENTA}100 ${NC}random tests with $INDEX numbers${RED} FAILED! ${NC}"
 fi
