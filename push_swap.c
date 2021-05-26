@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:19:29 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 06:22:44 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/26 02:34:09 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	debugger(t_stack *stack_a, t_stack *stack_b)
 	ft_lstgoto_end_mod(&stack_a);
 	ft_lstgoto_end_mod(&stack_b);
 
-	printf("-----------------------------------------------------------\n");
+	printf("--------------------------------------------------------\n");
 	printf("stack a:			stack b:\n");
 	printf("				\n");
 
@@ -87,6 +87,7 @@ void	debugger(t_stack *stack_a, t_stack *stack_b)
 			size_b--;
 		}
 	}
+	printf("				\n");
 }
 
 
@@ -101,26 +102,23 @@ int	main(int argc, char **argv)
 
 	initialize_stacks(&stack_a, &stack_b, argv, argc);
 
-	//swap_a(&stack_a);
-	//swap_b(&stack_b);
-	//swap_a_and_b(&stack_a, &stack_b);
-	//push_a(&stack_a, &stack_b);
-	//push_b(&stack_a, &stack_b);
-	//rotate_a(&stack_a);
-	//rotate_b(&stack_b);
-	//rotate_a_and_b(&stack_a, &stack_b);
-	//reverse_rotate_a(&stack_a);
-	//reverse_rotate_b(&stack_b);
-	//reverse_rotate_a_and_b(&stack_a, &stack_b);
+	//debugger(stack_a, stack_b);
 
-	debugger(stack_a, stack_b);
+	if (argc == 3)
+		sorting_two_args(&stack_a, &stack_b);
+	else if (argc == 4)
+		sorting_three_args(&stack_a, &stack_b);
+	else if (argc == 5 || argc == 6)
+		sorting_four_to_five_args(&stack_a, &stack_b);
 
+
+	//debugger(stack_a, stack_b);
 
 	ft_lstclear_mod(&stack_a);
 	ft_lstclear_mod(&stack_b);
 
 
 
-	printf("-----------------------------------------------------------\n");
+	//printf("--------------------------------------------------------\n");
 
 }

@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:18:22 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/25 06:18:10 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/26 02:33:34 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,29 @@ int				ft_lstsize_mod(t_stack *lst);
 void			ft_lstremove_last_mod(t_stack **lst);
 void			ft_lstremove_first_mod(t_stack **lst);
 
+/*
+**	Utils
+*/
+
+void			call(char *string, t_stack **stack_a, t_stack **stack_b);
+
+/*
+**	Sorting
+*/
+
+int				is_stack_a_in_order(t_stack **stack_a);
+int				stack_a_has_all_elements(t_stack **stack_a);
+int				is_top_stack_a_smallest_order_nbr(t_stack **stack_a);
+int				is_top_nbr_smaller_than_prev_nbr(t_stack **stack_a);
+
+void			sorting_two_args(t_stack **stack_a, t_stack **stack_b);
+void			sorting_three_args(t_stack **stack_a, t_stack **stack_b);
+void			sorting_four_to_five_args(t_stack **stack_a, t_stack **stack_b);
+
+/*
+**	Debugger
+*/
+
+void			debugger(t_stack *stack_a, t_stack *stack_b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tisantos <tisantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 16:30:43 by tisantos          #+#    #+#             */
-/*   Updated: 2021/05/24 02:34:00 by tisantos         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:13:36 by tisantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ int	error_handling(int argc, char **argv)
 	int i;
 
 	i = 1;
+	if (argc == 2 && ft_isstringdigit(argv[1]) == 1)
+		exit (0);
 	if (argc <= 2)
 		return (0);
 	while (argv[i] != NULL)
