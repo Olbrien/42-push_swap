@@ -20,7 +20,7 @@ void	rot_stack(t_stack **stack)
 		return ;
 	add = *stack;
 	*stack = add->next;
-	add->next = 0;
+	add->next = NULL;
 	ft_lstadd_back_mod(stack, add);
 }
 
@@ -40,7 +40,7 @@ void	rev_rot_stack(t_stack **stack)
 		len--;
 	}
 	add = temp->next;
-	temp->next = 0;
+	temp->next = NULL;
 	ft_lstadd_front_mod(stack, add);
 }
 
@@ -52,7 +52,7 @@ void	push_stack(t_stack **dest, t_stack **src)
 		return ;
 	temp = *src;
 	*src = temp->next;
-	temp->next = 0;
+	temp->next = NULL;
 	ft_lstadd_front_mod(dest, temp);
 }
 
