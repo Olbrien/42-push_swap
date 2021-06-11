@@ -19,6 +19,8 @@ int	main(int argc, char **argv)
 
 	stack_b = NULL;
 	stack_a = NULL;
+	if (argc == 1)
+		return (0);
 	if (error_handling(argc, argv) == 0)
 		return (exit_error("Error\n"));
 	fill_stack_a(argc, argv, &stack_a);
