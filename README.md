@@ -11,12 +11,15 @@
 ###### <i>Old Update on 25/05/2021.</i>
 • Started the project.
 
+## Subject:
+
+You can find the subject of this project [here.](https://github.com/Olbrien/42Lisboa-lvl_2_push_swap/blob/main/extras/lvl_2_push_swap.pdf)
 
 ## How to run:
 
 First download the repository.
 
-Type make to compile it.
+Type make to compile it.\
 To start the program it's:
 
 `./push_swap "number 1" "number 2" "number 3" (...)`
@@ -41,3 +44,10 @@ Tried a few other times, it was fast, but not enough.
 One other very important thing in this project was the use of Doubly Linked List.\
 It improved the usage of Linked Lists vastly.
 
+## Tester:
+
+I made a tester for this project.\
+You can find it [here](https://github.com/Olbrien/42Lisboa-lvl_2_push_swap_tester).
+
+![GitHub Logo](https://github.com/Olbrien/42Lisboa-lvl_2_push_swap_tester/blob/main/extras/2.png)\
+![GitHub Logo](https://github.com/Olbrien/42Lisboa-lvl_2_push_swap_tester/blob/main/extras/1.png)
