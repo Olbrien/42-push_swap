@@ -1,3 +1,3 @@
 # push_swap
 
-![GitHub Logo](/extras/images/Success.png)
+![GitHub Logo](/extras/images/success.png)
